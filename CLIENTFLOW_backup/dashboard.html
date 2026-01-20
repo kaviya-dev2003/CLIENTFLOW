@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CLIENTFLOW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/tables.css">
+    <style>
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            cursor: pointer;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .chart-placeholder {
+            height: 340px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 14px;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <i class="bi bi-stack"></i> CLIENTFLOW
+        </div>
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="sidebar-link active">
+                <i class="bi bi-grid-1x2"></i> Dashboard
+            </a>
+            <a href="projects.html" class="sidebar-link">
+                <i class="bi bi-briefcase"></i> Projects
+            </a>
+            <a href="clients.html" class="sidebar-link">
+                <i class="bi bi-people"></i> Clients & Finance
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="bi bi-gear"></i> Settings
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="sidebar-link">
+                <i class="bi bi-box-arrow-left"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="page-header">
+            <div>
+                <h1 class="h3 mb-1">Welcome back, Alex</h1>
+                <p class="text-muted small mb-0">Here's what's happening with your projects today.</p>
+            </div>
+            <div class="user-profile">
+                <div class="text-end d-none d-md-block">
+                    <div class="small fw-semibold">Alex Rivers</div>
+                    <div class="text-muted" style="font-size: 11px;">Admin</div>
+                </div>
+                <div class="user-avatar">AR</div>
+            </div>
+        </header>
+
+        <section class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="stats-icon"><i class="bi bi-people"></i></div>
+                    <span class="stats-label">Total Clients</span>
+                    <h3 class="stats-value">12</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="stats-icon"><i class="bi bi-briefcase"></i></div>
+                    <span class="stats-label">Active Projects</span>
+                    <h3 class="stats-value">24</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="stats-icon"><i class="bi bi-cash-stack"></i></div>
+                    <span class="stats-label">Paid Invoices</span>
+                    <h3 class="stats-value">$45,200</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stats-card">
+                    <div class="stats-icon"><i class="bi bi-clock-history"></i></div>
+                    <span class="stats-label">Pending Amount</span>
+                    <h3 class="stats-value">$8,400</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="row g-4">
+            <div class="col-lg-8">
+                <div class="card h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="h5 mb-0">Project Revenue</h4>
+                        <select class="form-select form-select-sm bg-dark border-secondary text-white w-auto">
+                            <option>Last 6 Months</option>
+                            <option>Last Year</option>
+                        </select>
+                    </div>
+                    <div class="chart-placeholder">
+                        <i class="bi bi-bar-chart-line fs-1 opacity-25"></i>
+                        <span class="ms-3">Financial Analytics Feed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <h4 class="h5 mb-4">Recent Activity</h4>
+                    <div class="activity-feed">
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle"
+                                    style="width: 8px; height: 8px; margin-top: 6px;"></div>
+                            </div>
+                            <div>
+                                <p class="small mb-1"><strong>New Project Created</strong></p>
+                                <p class="text-muted mb-0" style="font-size: 11px;">"E-commerce Redesign" for Acme Inc.
+                                </p>
+                                <p class="text-muted smaller mt-1" style="font-size: 10px;">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-success rounded-circle"
+                                    style="width: 8px; height: 8px; margin-top: 6px;"></div>
+                            </div>
+                            <div>
+                                <p class="small mb-1"><strong>Invoice Paid</strong></p>
+                                <p class="text-muted mb-0" style="font-size: 11px;">Invoice #INV-2024-041 ($2,500)</p>
+                                <p class="text-muted smaller mt-1" style="font-size: 10px;">5 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-warning rounded-circle"
+                                    style="width: 8px; height: 8px; margin-top: 6px;"></div>
+                            </div>
+                            <div>
+                                <p class="small mb-1"><strong>Task Overdue</strong></p>
+                                <p class="text-muted mb-0" style="font-size: 11px;">"Finalize Brand Guidelines"</p>
+                                <p class="text-muted smaller mt-1" style="font-size: 10px;">Yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

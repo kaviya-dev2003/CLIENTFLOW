@@ -1,0 +1,60 @@
+:root {
+  /* Background Layers */
+  --bg-main: #0B0F19;
+  --bg-surface: #111827;
+  --bg-hover: #1F2937;
+
+  /* Brand Colors */
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
+
+  /* Text Colors */
+  --text-main: #E5E7EB;
+  --text-muted: #9CA3AF;
+
+  /* Status Colors */
+  --success: #22C55E;
+  --warning: #FACC15;
+  --danger: #EF4444;
+
+  /* Spacing Scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-primary: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+ul {
+  list-style: none;
+}
